@@ -5,6 +5,11 @@ export default function Usuario() {
   const [nome, setNome] = React.useState("Insira nome de usuário");
   const nomeUsuario = () => prompt("Qual o nome de usuário?");
 
+  if (nome === "") {
+    setNome("Insira nome de usuário");
+
+    alert("Insira um nome de usuário");
+  }
   const [imagem, setImagem] = React.useState(
     "https://www.zooplus.pt/magazine/wp-content/uploads/2021/03/kitten-sitzt-boden-768x512-1.jpeg"
   );
